@@ -1,0 +1,13 @@
+---
+tftp_owner: <%= @szDnsmasqProcessOwnerName %>
+http_owner: <%= @szWebProcessOwnerName %>
+BS_BOOT_KERNEL_BASE_DIRECTORY: <%= @szTftpBaseDirectory %>
+BS_CONFIG_BASE_DIRECTORY: <%= @szKickStartBaseDirectory %>/configs
+BS_NFS_BASE_PATH: <%= @szKickStartBaseDirectory %>
+BS_RELATIVE_CONFIG_DIRECTORY: configs
+BS_RELATIVE_IMAGE_DIRECTORY: images
+BS_RELATIVE_EXTRA_REPO_DIRECTORY: extrarepos
+BS_DISTRO_CONFIGURATION_FILE: <%= @szKickStartBaseDirectory %>/distros.yaml
+BS_HTTP_PORT_NUMBER: 80
+BS_MEDIA_HOST_ADDRESS: <%= @szNetworkAddress %>
+BS_ROLE_CONFIG_SEARCH_PATH: /opt/OPSbst/roles

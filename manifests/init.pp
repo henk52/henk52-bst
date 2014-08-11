@@ -35,7 +35,17 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class bst {
+class bst ( 
+  $szDnsmasqProcessOwnerName = 'nobody',
+  $szWebProcessOwnerName = 'lighttpd',
+  $szIpAddressForSupportingKickStart = hiera( 'IpAddressForSupportingKickStart' ),
+  $szTftpBaseDirectory = '/var/tftp',
+  $szKickStartBaseDirectory = '/var/ks',
+) {
 
+file { '/etc/config_boot_server_tool.yaml':
+  ensure  => file,
+  content => template('/etc/puppet/modules/bst/templates/config_boot_server_tool_yaml.erb'),
+}
 
 }
