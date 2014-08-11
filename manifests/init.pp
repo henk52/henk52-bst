@@ -43,9 +43,38 @@ class bst (
   $szKickStartBaseDirectory = '/var/ks',
 ) {
 
+$szBootServerVarDirectory = "/var/boot_server_tools"
+$szTmpMountPoint = "$szBootServerVarDirectory/tmp"
+
+file { "$szBootServerVarDirectory":
+  ensure => directory,
+}
+
+file { "$szTmpMountPoint":
+  ensure  => directory,
+  require => File [ "$szBootServerVarDirectory" ],
+}
+
 file { '/etc/config_boot_server_tool.yaml':
   ensure  => file,
   content => template('/etc/puppet/modules/bst/templates/config_boot_server_tool_yaml.erb'),
+}
+
+
+package { 'perl-Text-Template':
+  ensure => present,
+}
+
+package { 'perl-Data-Dumper':
+  ensure => present,
+}
+
+package { 'perl-YAML-LibYAML':
+  ensure => present,
+}
+
+package { 'fuseiso':
+  ensure => present,
 }
 
 }
