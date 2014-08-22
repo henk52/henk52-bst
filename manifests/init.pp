@@ -41,6 +41,7 @@ class bst (
   $szIpAddressForSupportingKickStart = hiera( 'IpAddressForSupportingKickStart' ),
   $szTftpBaseDirectory = '/var/tftp',
   $szKickStartBaseDirectory = '/var/ks',
+  $szKickStartImageDirectory = "$szKickStartBaseDirectory/images"
 ) {
 
 $szBootServerVarDirectory = "/var/boot_server_tools"
