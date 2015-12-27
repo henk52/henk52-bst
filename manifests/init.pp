@@ -53,7 +53,7 @@ file { "$szBootServerVarDirectory":
 
 file { "$szTmpMountPoint":
   ensure  => directory,
-  require => File [ "$szBootServerVarDirectory" ],
+  require => File[ "$szBootServerVarDirectory" ],
 }
 
 file { '/etc/config_boot_server_tool.yaml':
