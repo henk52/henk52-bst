@@ -42,7 +42,7 @@ class bst (
   $szTftpBaseDirectory = '/var/tftp',
   $szKickStartBaseDirectory = '/var/ks',
   $szKickStartImageDirectory = "$szKickStartBaseDirectory/images",
-  $szKickStartMirrorDirectory = "$szKickStartBaseDirectory/mirrors"
+  $szKickStartMirrorDirectory = "mirrors"
 ) {
 
 $szBootServerVarDirectory = "/var/boot_server_tools"

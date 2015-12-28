@@ -1,5 +1,5 @@
 name    'henk52-bst'
-version '0.1.1'
+version '0.1.2'
 source 'UNKNOWN'
 author 'henk52'
 license 'Apache License, Version 2.0'
